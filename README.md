@@ -19,9 +19,6 @@ El aplicativo incluye:
 * **Módulo de Ciencias Naturales con Three.js**:
 
   * Sistema Solar Interactivo (`SolarSystem.tsx`)
-  * Ciclo del Agua en 3D (`WaterCycle.tsx`)
-  * Clasificación de Animales con Modelos 3D (`AnimalClassification.tsx`)
-  * Simulación de Energía Eólica (`Windmill.tsx`)
 
 ---
 
@@ -107,9 +104,6 @@ src/
 
 ### Componentes de Ciencias Naturales (Three.js)
 7. **SolarSystem.tsx**: Sistema solar interactivo con planetas orbitando alrededor del Sol.
-8. **WaterCycle.tsx**: Simulación 3D del ciclo del agua con evaporación, condensación, precipitación y escorrentía.
-9. **AnimalClassification.tsx**: Clasificación interactiva de animales por tipo (mamíferos, aves, reptiles, peces, anfibios, invertebrados).
-10. **Windmill.tsx**: Simulación de energía eólica con molino de viento que genera energía según la velocidad del viento.
 
 ---
 

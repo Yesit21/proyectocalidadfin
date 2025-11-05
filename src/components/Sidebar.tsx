@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaHome, FaCube, FaColumns, FaMicrophone, FaShapes, FaCalculator, FaRuler, FaKey, FaMouse, FaList, FaSun, FaWater, FaPaw, FaWind } from "react-icons/fa";
+import { FaHome, FaCube, FaColumns, FaMicrophone, FaShapes, FaCalculator, FaRuler, FaKey, FaMouse, FaList, FaSun } from "react-icons/fa";
 
 interface SidebarItem {
   label: string;
@@ -18,9 +18,6 @@ const mainItems: SidebarItem[] = [
 
 const scienceItems: SidebarItem[] = [
   { label: "Sistema Solar Interactivo", route: "/sistema-solar", icon: <FaSun /> },
-  { label: "Ciclo del Agua 3D", route: "/ciclo-agua", icon: <FaWater /> },
-  { label: "Clasificación de Animales", route: "/clasificacion-animales", icon: <FaPaw /> },
-  { label: "Energía Eólica", route: "/energia-eolica", icon: <FaWind /> },
 ];
 
 const exerciseItems: SidebarItem[] = [
