@@ -32,9 +32,17 @@ const planetQuizzes = {
 
 const speakText = (text: string) => {
   if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'es-ES'; utterance.rate = 0.8; utterance.pitch = 1;
-    speechSynthesis.speak(utterance);
+    try {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-ES';
+      utterance.rate = 0.8;
+      utterance.pitch = 1;
+      speechSynthesis.speak(utterance);
+    } catch (error) {
+      console.error('Error en síntesis de voz:', error);
+    }
+  } else {
+    console.warn('Síntesis de voz no disponible en este navegador');
   }
 };
 
@@ -89,6 +97,8 @@ export default function SolarSystem() {
     controls.dampingFactor = 0.05;
     controls.enableZoom = true;
     controls.enablePan = true;
+    controls.autoRotate = autoRotate;
+    controls.autoRotateSpeed = 0.5;
 
     // Luces
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
