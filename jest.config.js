@@ -11,7 +11,9 @@ export default {
   ],
   moduleNameMapper: {
     "^.+\\.(css|scss|sass|less)$": "identity-obj-proxy",
-    "^three$": "<rootDir>/node_modules/three/build/three.module.js",
-    "^three/(.*)$": "<rootDir>/node_modules/three/examples/jsm/$1",
+    "^three$": "<rootDir>/src/__mocks__/three.ts",
+    "^three/examples/jsm/controls/OrbitControls$": "<rootDir>/src/__mocks__/three/examples/jsm/controls/OrbitControls.ts",
+    "^three/(.*)$": "<rootDir>/src/__mocks__/three/$1",
+    "^react-globe.gl$": "<rootDir>/src/__mocks__/react-globe.gl.ts",
   },
 };
