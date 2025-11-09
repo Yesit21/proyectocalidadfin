@@ -11,7 +11,7 @@ export default {
   ],
   moduleNameMapper: {
     "^.+\\.(css|scss|sass|less)$": "identity-obj-proxy",
-    "^three$": "<rootDir>/node_modules/three/src/Three.js",
-    "^three/(.*)$": "<rootDir>/node_modules/three/src/$1",
+    "^three$": "<rootDir>/node_modules/three/build/three.module.js",
+    "^three/(.*)$": "<rootDir>/node_modules/three/examples/jsm/$1",
   },
 };
