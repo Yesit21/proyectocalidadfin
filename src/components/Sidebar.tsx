@@ -42,7 +42,7 @@ const techLogicItems: SidebarItem[] = [
 ];
 
 export default function Sidebar() {
-  const [openScience, setOpenScience] = useState(true);
+  const [openScience, setOpenScience] = useState(false);
   const [openSocial, setOpenSocial] = useState(false);
   const [openTechLogic, setOpenTechLogic] = useState(false);
 
@@ -54,6 +54,12 @@ export default function Sidebar() {
       <NavLink
         key={route}
         to={route}
+        onClick={() => {
+          // Cerrar todas las secciones cuando se hace clic en un item
+          setOpenScience(false);
+          setOpenSocial(false);
+          setOpenTechLogic(false);
+        }}
         className={({ isActive }) =>
           `group w-full text-left flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 transform hover:scale-105 ${
             isActive
