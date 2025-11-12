@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 
 // Views
+import WelcomeView from "../views/WelcomeView";
 import HomePage from "../views/HomePage";
 import ThreeDemoView from "../views/ThreeDemoView";
 import LayoutsView from "../views/LayoutsView";
@@ -20,7 +21,8 @@ import GlobeView from "../views/GlobeView";
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<WelcomeView />} />
+      <Route path="/app" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="three" element={<ThreeDemoView />} />
         <Route path="layouts" element={<LayoutsView />} />
